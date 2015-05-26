@@ -296,7 +296,7 @@ if (keyboard_check(vk_escape) || (gamepad_button_check(0,gp_start) &amp;&amp; ga
     {
         game_end();
     }
-image_angle = point_direction(x, y, obj_player.x + rxaxis, obj_player.y + ryaxis);
+image_angle = point_direction(x, y, obj_nPlayer.x + rxaxis, obj_nPlayer.y + ryaxis);
 </string>
           </argument>
         </arguments>
@@ -372,7 +372,7 @@ ycoins += 1;
             <string>draw_text(32, 32, string(fps));
 draw_text(32, 48, "vspd:" +string(vspd));
 draw_text(32, 64, "hspd:" +string(hspd));
-draw_text(32, 80, "X-" + string(obj_player.x) + "  Y-" + string(obj_player.y));
+draw_text(32, 80, "X-" + string(obj_nPlayer.x) + "  Y-" + string(obj_nPlayer.y));
 
 draw_text(32, 96, string(lxaxis) + "," + string(lyaxis));
 draw_text(32, 112, string(rxaxis) + "," + string(ryaxis));
