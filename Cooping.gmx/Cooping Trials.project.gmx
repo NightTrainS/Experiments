@@ -25,7 +25,8 @@
       <sprite>sprites\spr_mario</sprite>
     </sprites>
     <sprites name="bSprites">
-      <sprite>sprites\sprite12</sprite>
+      <sprite>sprites\spr_benemy</sprite>
+      <sprite>sprites\spr_level_one</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -41,7 +42,7 @@
       <object>objects\obj_enemy</object>
     </objects>
     <objects name="bObjects">
-      <object>objects\obj_bPlayer</object>
+      <object>objects\obj_bwalkingenemy</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -52,6 +53,7 @@
     <rooms name="bRooms">
       <room>rooms\rm_bRoom1</room>
       <room>rooms\rm_bRoom3</room>
+      <room>rooms\room4</room>
     </rooms>
   </rooms>
   <help>
