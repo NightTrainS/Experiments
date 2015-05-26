@@ -24,6 +24,9 @@
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_mario</sprite>
     </sprites>
+    <sprites name="bSprites">
+      <sprite>sprites\sprite12</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
