@@ -23,6 +23,14 @@
       <object>objects\obj_cool</object>
     </objects>
   </objects>
+  <rooms name="rooms">
+    <rooms name="nRooms">
+      <room>rooms\rm_nRoom</room>
+    </rooms>
+    <rooms name="bRooms">
+      <room>rooms\rm_bRoom</room>
+    </rooms>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
