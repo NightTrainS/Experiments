@@ -82,11 +82,21 @@ if(place_meeting(x+hspd,y,obj_solid))
 
 x+=hspd;
 
-if(place_meeting(x,y+4,obj_nPlayer))
+//Enemy Collision
+if(place_meeting(x,y,obj_nPlayer))
 {
+    if (obj_nPlayer.y &lt; y-16)
+    {
+        with (obj_nPlayer) vsp = -jspd;
         instance_destroy();
+    }
+    else
+    {
+        
+        room_restart();
+    }
 }
-
+        
 </string>
           </argument>
         </arguments>
