@@ -34,6 +34,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <objects name="nObjects">
       <object>objects\obj_nPlayer</object>
@@ -43,6 +46,13 @@
       <object>objects\obj_bgd_music</object>
       <object>objects\obj_next_room</object>
       <object>objects\obj_enemy</object>
+      <objects name="room switches">
+        <object>objects\obj_nRm2</object>
+        <object>objects\obj_nRm4</object>
+        <object>objects\obj_bRm1</object>
+        <object>objects\obj_bRm3</object>
+        <object>objects\obj_start_return</object>
+      </objects>
     </objects>
     <objects name="bObjects">
       <object>objects\obj_bwalkingenemy</object>
@@ -54,6 +64,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start_room</room>
     <room>rooms\debug_level_select</room>
     <rooms name="nRooms">
       <room>rooms\rm_nRoom2</room>
