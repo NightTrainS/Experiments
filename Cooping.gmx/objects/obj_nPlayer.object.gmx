@@ -163,7 +163,7 @@ if (lkey)
 // Check down input
 if (dkey)
     {
-        image_yscale = .5;
+        image_yscale = 1;
     }
 else
     {
@@ -270,7 +270,7 @@ if (place_meeting(x+(hspd), y, obj_solid))
 
     
 // Move horizontally
-x += hspd;
+x += round(hspd);
 
 // Vertical collisions
 if (place_meeting(x, y+vspd, obj_solid))

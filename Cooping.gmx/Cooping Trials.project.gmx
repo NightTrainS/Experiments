@@ -19,10 +19,10 @@
       <sprite>sprites\spr_coin</sprite>
       <sprite>sprites\spr_ninja_run</sprite>
       <sprite>sprites\spr_ninja_swim</sprite>
-      <sprite>sprites\spr_player2</sprite>
       <sprite>sprites\spr_player_test</sprite>
-      <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_mario</sprite>
+      <sprite>sprites\spr_gnd_block1</sprite>
+      <sprite>sprites\spr_coin1</sprite>
     </sprites>
     <sprites name="bSprites">
       <sprite>sprites\spr_benemy</sprite>
@@ -42,7 +42,9 @@
       <object>objects\obj_nPlayer</object>
       <object>objects\obj_game_end</object>
       <object>objects\obj_solid</object>
+      <object>objects\obj_gnd_block1</object>
       <object>objects\obj_coin</object>
+      <object>objects\obj_coin1</object>
       <object>objects\obj_bgd_music</object>
       <object>objects\obj_next_room</object>
       <object>objects\obj_enemy</object>
