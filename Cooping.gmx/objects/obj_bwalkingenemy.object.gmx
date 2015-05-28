@@ -80,7 +80,15 @@ if(place_meeting(x+hspd,y,obj_solid))
     dir*=-1;
 }
 
+//If nothing is
+if(place_free(x+sign(hspd)*(sprite_width/2),y+1))
+{
+    dir*=-1;
+}
+
 x+=hspd;
+
+
 
 //Enemy Collision
 if(place_meeting(x,y,obj_nPlayer))

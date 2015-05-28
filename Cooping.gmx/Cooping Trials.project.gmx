@@ -56,6 +56,7 @@
     </objects>
     <objects name="bObjects">
       <object>objects\obj_bwalkingenemy</object>
+      <object>objects\obj_goomba</object>
       <object>objects\obj_bouncingenemy</object>
       <object>objects\obj_controller</object>
       <object>objects\obj_menu_button_1</object>
