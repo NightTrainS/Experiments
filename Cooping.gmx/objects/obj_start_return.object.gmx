@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_start_room);
+            <string>room_goto(rm_start_switch_room);
 </string>
           </argument>
         </arguments>

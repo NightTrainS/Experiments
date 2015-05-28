@@ -64,7 +64,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_start_room</room>
+    <room>rooms\rm_start_switch_room</room>
     <room>rooms\debug_level_select</room>
     <rooms name="nRooms">
       <room>rooms\rm_nRoom2</room>
