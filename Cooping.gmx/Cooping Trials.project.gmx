@@ -43,8 +43,8 @@
       <object>objects\obj_game_end</object>
       <object>objects\obj_solid</object>
       <object>objects\obj_gnd_block1</object>
-      <object>objects\obj_coin</object>
       <object>objects\obj_coin1</object>
+      <object>objects\obj_coin</object>
       <object>objects\obj_bgd_music</object>
       <object>objects\obj_next_room</object>
       <object>objects\obj_enemy</object>

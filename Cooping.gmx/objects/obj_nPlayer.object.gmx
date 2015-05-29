@@ -3,7 +3,7 @@
   <spriteName>spr_ninja_stand</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -78,37 +78,37 @@ xbutton = 0;
 // Gamepad Input
 //var device = argument[0];
 
-lxaxis = gamepad_axis_value(0, gp_axislh);  // returns value (-1, 1)
-lyaxis = gamepad_axis_value(0, gp_axislv);  // returns value (-1, 1)
-lmagnitude = point_distance(0, 0, lxaxis, lyaxis);
+//lxaxis = gamepad_axis_value(0, gp_axislh);  // returns value (-1, 1)
+//lyaxis = gamepad_axis_value(0, gp_axislv);  // returns value (-1, 1)
+//lmagnitude = point_distance(0, 0, lxaxis, lyaxis);
 
-if (lmagnitude &gt; 1) 
-    {lmagnitude = 1;}
+//if (lmagnitude &gt; 1) 
+//    {lmagnitude = 1;}
     
-rxaxis = gamepad_axis_value(0, gp_axisrh);  // returns value (-1, 1)
-ryaxis = gamepad_axis_value(0, gp_axisrv);  // returns value (-1, 1)
-rmagnitude = point_distance(0, 0, rxaxis, ryaxis);
+//rxaxis = gamepad_axis_value(0, gp_axisrh);  // returns value (-1, 1)
+//ryaxis = gamepad_axis_value(0, gp_axisrv);  // returns value (-1, 1)
+//rmagnitude = point_distance(0, 0, rxaxis, ryaxis);
 
-if (rmagnitude &gt; 1) 
-    {rmagnitude = 1;}
+//if (rmagnitude &gt; 1) 
+//    {rmagnitude = 1;}
 
-if (abs(rxaxis)&lt;.3)
-    {
-        rxaxis = 0;
-    }
-else
-    {
-        rxaxis = rxaxis;
-    }
-    
-if (abs(ryaxis)&lt;.3)
-    {
-        ryaxis = 0;
-    }
-else
-    {
-        ryaxis = ryaxis;
-    }
+//if (abs(rxaxis)&lt;.3)
+//    {
+//        rxaxis = 0;
+//    }
+//else
+//    {
+//        rxaxis = rxaxis;
+//    }
+//    
+//if (abs(ryaxis)&lt;.3)
+//   {
+//        ryaxis = 0;
+//    }
+//else
+//    {
+//        ryaxis = ryaxis;
+//    }
 
 //  grav = 2;
 //  hspd = 0;
@@ -190,7 +190,15 @@ if (gamepad_button_check_pressed(0,gp_face2))
             }
     
 
-
+if (place_meeting(x,y, obj_coin1))
+    {
+        ycoins +=1;
+        audio_play_sound(snd_coin,9,false);
+        with instance_nearest(x,y,obj_coin1)
+        {instance_destroy();}
+    }
+            
+            
 // Jump
 // Ground Check
 if (!place_meeting(x, y+1, obj_solid))
@@ -282,25 +290,25 @@ if (place_meeting(x, y+vspd, obj_solid))
         vspd = 0;
     }
 
-if (hspd != 0)
-    {
-        if !place_free(x+hspd, y)
-            {
-                if hspd &gt; 0 move_contact_solid(0, hspd);
-                if hspd &lt; 0 move_contact_solid(180, -hspd);
-                hspd = 0;
-            }
-    }
+//if (hspd != 0)
+//    {
+//        if !place_free(x+hspd, y)
+//            {
+//                if hspd &gt; 0 move_contact_solid(0, hspd);
+//                if hspd &lt; 0 move_contact_solid(180, -hspd);
+//                hspd = 0;
+//            }
+//    }
 
-if (vspd != 0)
-    {
-        if !place_free(x+hspd, y+vspd)
-            {
-                if vspd &gt; 0 move_contact_solid(270, vspd);
-                if vspd &lt; 0 move_contact_solid(90, -vspd);
-                vspd = 0;
-            }
-    }
+//if (vspd != 0)
+//    {
+//        if !place_free(x+hspd, y+vspd)
+//            {
+//                if vspd &gt; 0 move_contact_solid(270, vspd);
+//                if vspd &lt; 0 move_contact_solid(90, -vspd);
+//                vspd = 0;
+//            }
+//    }
 
 
 // Move Vertically
@@ -311,7 +319,7 @@ if (keyboard_check(vk_escape) || (gamepad_button_check(0,gp_start) &amp;&amp; ga
     {
         game_end();
     }
-image_angle = point_direction(x, y, obj_nPlayer.x + rxaxis, obj_nPlayer.y + ryaxis);
+//image_angle = point_direction(x, y, obj_nPlayer.x + rxaxis, obj_nPlayer.y + ryaxis);
 
 
 //Fall in Gap and die
@@ -319,32 +327,6 @@ if y&gt;room_height
 {
 room_restart();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_coin">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Collect coins
-
-ycoins += 1;
-
 </string>
           </argument>
         </arguments>
@@ -372,8 +354,8 @@ draw_text(32, 48, "vspd:" +string(vspd));
 draw_text(32, 64, "hspd:" +string(hspd));
 draw_text(32, 80, "X-" + string(obj_nPlayer.x) + "  Y-" + string(obj_nPlayer.y));
 
-draw_text(32, 96, string(lxaxis) + "," + string(lyaxis));
-draw_text(32, 112, string(rxaxis) + "," + string(ryaxis));
+//draw_text(32, 96, string(lxaxis) + "," + string(lyaxis));
+//draw_text(32, 112, string(rxaxis) + "," + string(ryaxis));
 
 draw_text(32, 128, "X-"+string(xbutton));
 draw_text(32, 144, "B-"+string(bbutton));
