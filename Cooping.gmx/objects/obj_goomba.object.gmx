@@ -54,9 +54,7 @@ grav=2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Walking enemy AI
-
-//dir = Direction of the enemy
+            <string>//dir = Direction of the enemy
 //hspd = speed and direction of the enemy
 //vspd = vertical speed of the enemy
 //walkspeed = speed of the enemy
@@ -112,7 +110,6 @@ if(place_meeting(x,y,obj_nPlayer))
         room_restart();
     }
 }
-        
 </string>
           </argument>
         </arguments>
