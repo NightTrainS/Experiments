@@ -30,6 +30,7 @@
       <sprite>sprites\spr_level_2</sprite>
       <sprite>sprites\spr_level_3</sprite>
       <sprite>sprites\spr_level_4</sprite>
+      <sprite>sprites\spr_fireball</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -65,6 +66,7 @@
       <object>objects\obj_menu_button_3</object>
       <object>objects\obj_menu_button_4</object>
       <object>objects\obj_goomba</object>
+      <object>objects\obj_fireball</object>
     </objects>
   </objects>
   <rooms name="rooms">
