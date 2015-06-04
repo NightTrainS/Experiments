@@ -42,12 +42,17 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_move_right.gml</script>
+    <script>scripts\scr_move_left.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">
     <objects name="nObjects">
       <object>objects\obj_nPlayer</object>
+      <object>objects\obj_nEnemy</object>
       <object>objects\obj_game_end</object>
       <object>objects\obj_solid</object>
       <object>objects\obj_gnd_block1</object>
