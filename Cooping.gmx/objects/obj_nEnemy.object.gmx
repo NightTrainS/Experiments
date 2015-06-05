@@ -28,7 +28,7 @@
             <string>/// Initialize the enemy
 
 state = choose(scr_move_right, scr_move_left);
-image_speed = 0;
+image_speed = 0.2;
 </string>
           </argument>
         </arguments>
@@ -55,6 +55,15 @@ image_speed = 0;
 var vspd = 0;
 var grav = 1;
 script_execute(state);
+
+if state = scr_move_right
+    {
+        sprite_index = spr_grn_turtle_walk_right;
+    }
+else
+    {
+        sprite_index = spr_grn_turtle_walk;
+    }
 
 // Check for ground
 if (place_meeting(x, y+1, obj_solid))

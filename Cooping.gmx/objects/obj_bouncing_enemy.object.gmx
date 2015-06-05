@@ -32,7 +32,7 @@ hspd=0;  //Determines the velocity of the enemy
 vspd=0;  //Vertical velocity of the enemy set to zero
 jspd=4; // vertical speed of the enemy
 grav =.2; //Gravity to bring down the enemy
-
+image_speed = .2;
 </string>
           </argument>
         </arguments>
@@ -110,8 +110,8 @@ if(place_meeting(x,y,obj_nPlayer))
 {
     if (obj_nPlayer.y &lt; y-8)
     {
-        with (obj_nPlayer) vsp = -jspd;
-        instance_destroy();
+     //   with (obj_nPlayer) vsp = -jspd;
+     //  instance_destroy();
     }
     else
     {

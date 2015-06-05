@@ -96,8 +96,8 @@ if(place_meeting(x,y,obj_nPlayer) || place_meeting(x+9,y,obj_nPlayer) ||  place_
 {
     if (obj_nPlayer.y &lt; y-13)
     {
-        with (obj_nPlayer) vsp = -jspd;
-        instance_destroy();
+        //with (obj_nPlayer) vsp = -jspd;
+        //instance_destroy();
     }
     else
     {

@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_nRoom2);
+            <string>if room_exists(rm_nRoom2)
+    {
+        instance_destroy();
+        room_goto(rm_nRoom2);
+    }
 </string>
           </argument>
         </arguments>

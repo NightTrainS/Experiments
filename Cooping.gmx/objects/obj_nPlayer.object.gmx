@@ -50,6 +50,7 @@ rmagnitude = 0;
 
 bbutton = 0;
 xbutton = 0;
+ybutton = 0;
 </string>
           </argument>
         </arguments>
@@ -184,6 +185,14 @@ else
     {
         xbutton = 0;
     }
+    
+    
+// Player Shoot
+
+//if gamepad_button_check(0,gp_face4)
+//    {
+//        instance_create(x,y,obj_fireball);
+//    }
     
 // Slide
 if (gamepad_button_check_pressed(0,gp_face2))
@@ -332,6 +341,78 @@ if y&gt;room_height
 {
 room_restart();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bwalkingenemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enemy collision
+
+if (y &lt; other.y - vspd)
+    {
+        with (other)
+            {
+                instance_destroy();
+            }
+        vspd = jspd;
+    }
+    else
+    {
+        room_restart();
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bouncing_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enemy collision
+
+if (y &lt; other.y - vspd)
+    {
+        with (other)
+            {
+                instance_destroy();
+            }
+        vspd = jspd;
+    }
+    else
+    {
+        room_restart();
+    }
 </string>
           </argument>
         </arguments>

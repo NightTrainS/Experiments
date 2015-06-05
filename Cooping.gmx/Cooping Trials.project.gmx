@@ -11,9 +11,11 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_grn_turtle_walk</sprite>
+    <sprite>sprites\spr_grn_turtle_walk_right</sprite>
     <sprite>sprites\spr_grn_turtle_hide</sprite>
     <sprite>sprites\spr_grn_turle_unhide</sprite>
     <sprite>sprites\spr_grn_turtle_fly</sprite>
+    <sprite>sprites\spr_grn_turtle_fly_right</sprite>
     <sprite>sprites\spr_red_turtle_walk</sprite>
     <sprite>sprites\spr_red_turtle_hide</sprite>
     <sprite>sprites\spr_red_turtle_fly</sprite>
