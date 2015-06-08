@@ -65,6 +65,7 @@
       <object>objects\obj_bgd_music</object>
       <object>objects\obj_next_room</object>
       <object>objects\obj_enemy</object>
+      <object>objects\object23</object>
       <objects name="room switches">
         <object>objects\obj_nRm2</object>
         <object>objects\obj_nRm4</object>
