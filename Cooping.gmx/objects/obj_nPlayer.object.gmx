@@ -456,6 +456,20 @@ if (y &lt; other.y - vspd)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>821</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_partsyst_destroy</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
