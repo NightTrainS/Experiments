@@ -983,6 +983,7 @@
     <instance objName="obj_nEnemy" x="472" y="136" name="inst_F7C46C63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nEnemy" x="496" y="184" name="inst_9167342D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nEnemy" x="536" y="136" name="inst_B8598430" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bgd_music" x="0" y="0" name="inst_F5D08E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

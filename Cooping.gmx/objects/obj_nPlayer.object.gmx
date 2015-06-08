@@ -227,7 +227,7 @@ if (place_meeting(x, y+1, obj_solid))
         if (jkey)
         {
             vspd = jspd;
-            //audio_play_sound(snd_sound,10,false);
+            audio_play_sound(snd_gnd_jump,10,false);
         }
     }
 else
@@ -372,6 +372,7 @@ if (y &lt; other.y - vspd)
                 instance_destroy();
             }
         vspd = jspd;
+        audio_play_sound(snd_enemy_pounce,10,false);
     }
     else
     {
@@ -408,6 +409,7 @@ if (y &lt; other.y - vspd)
                 instance_destroy();
             }
         vspd = jspd;
+        audio_play_sound(snd_enemy_pounce,10,false);
     }
     else
     {
@@ -444,6 +446,7 @@ if (y &lt; other.y - vspd)
                 instance_destroy();
             }
         vspd = jspd;
+        audio_play_sound(snd_enemy_pounce,10,false);
     }
     else
     {
