@@ -51,6 +51,33 @@ rmagnitude = 0;
 bbutton = 0;
 xbutton = 0;
 ybutton = 0;
+
+//Initalize fireball control
+can_shoot =1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Timer for Fireballs
+can_shoot = 1;
 </string>
           </argument>
         </arguments>
@@ -124,6 +151,7 @@ var lkey = keyboard_check(ord("A")) || gamepad_button_check(0,gp_padl);
 var jkey = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1);
 var dkey = keyboard_check(ord("S")) || gamepad_button_check(0,gp_padd);
 var jkey_held = keyboard_check(vk_space) || gamepad_button_check(0,gp_face1);
+var fkey = keyboard_check_pressed(ord("F"));
 
 
 if hspd = 0
@@ -139,6 +167,7 @@ if (rkey)
         image_speed = .05*hspd;
         image_xscale = 1;
         direction =0;
+       
         
     
         // Left wall jump
@@ -340,6 +369,16 @@ if (keyboard_check(vk_escape) || (gamepad_button_check(0,gp_start) &amp;&amp; ga
 if y&gt;room_height
 {
 room_restart();
+}
+
+// Fireball
+if (fkey &amp;&amp; can_shoot =1)
+{
+    fireball=instance_create(x,y,obj_fireball);
+    fireball.direction=direction;
+    fireball.speed = 5;
+    can_shoot = 0;
+    alarm[0] = 60;
 }
 </string>
           </argument>
