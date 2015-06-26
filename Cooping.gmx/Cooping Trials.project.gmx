@@ -36,11 +36,13 @@
       <sprite>sprites\spr_coin1</sprite>
     </sprites>
     <sprites name="bSprites">
+      <sprite>sprites\spr_shotgun</sprite>
       <sprite>sprites\spr_benemy</sprite>
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_cloud</sprite>
       <sprite>sprites\spr_3way</sprite>
       <sprite>sprites\spr_rapid</sprite>
+      <sprite>sprites\spr_spread</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -74,6 +76,7 @@
     </objects>
     <objects name="bObjects">
       <object>objects\obj_bouncing_enemy</object>
+      <object>objects\obj_spread</object>
       <object>objects\obj_bwalkingenemy</object>
       <object>objects\obj_controller</object>
       <object>objects\obj_fireball</object>
@@ -81,6 +84,7 @@
       <object>objects\obj_fireballdn</object>
       <object>objects\obj_3way</object>
       <object>objects\obj_rapid</object>
+      <object>objects\obj_shotgun</object>
     </objects>
   </objects>
   <rooms name="rooms">

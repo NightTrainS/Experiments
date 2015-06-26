@@ -53,9 +53,10 @@ xbutton = 0;
 ybutton = 0;
 
 //Initalize fireball control
-can_shoot =1;  //Controls the speed of how fast player can shoot
+can_shoot =4;  //Controls the number of shots of how fast player can shoot
 can_3way =0;  // Controls the power "3 way" shot
 can_rapid =0; // Controls the power "Rapid" shot
+can_shotgun =0; //Controls the powe "Shotgun Spread" shot
 </string>
           </argument>
         </arguments>
@@ -103,8 +104,8 @@ can_rapid =0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Timer for Fireballs
-can_shoot = 1;
+            <string>//Counter for Fireballs that the player can shoot.
+can_shoot = 4;
 </string>
           </argument>
         </arguments>
@@ -398,6 +399,9 @@ if y&gt;room_height
 room_restart();
 }
 
+
+
+
 //Controls the fireball for rapid shooting
 if can_rapid =1 &amp;&amp; can_3way=0
 {
@@ -407,27 +411,28 @@ if can_rapid =1 &amp;&amp; can_3way=0
     fireball.direction=direction;
     fireball.speed = 5;
     alarm[0]=15;
+    alarm[1]=1200;
     }
 }
 
 
 //Controls the fireball for normal shooting
 
-if can_3way =0 &amp;&amp; can_rapid =0
+if can_3way =0 &amp;&amp; can_rapid =0 &amp;&amp; can_shotgun =0
 {
-    if (fkey &amp;&amp; can_shoot =1)
+    if (fkey &amp;&amp; can_shoot &gt;=1)
     {
     fireball=instance_create(x,y,obj_fireball);
     fireball.direction=direction;
     fireball.speed = 5;
-    can_shoot = 0;
-    alarm[0] = 60;
+    can_shoot += -1;
+    alarm[0]= 120;
     }
 }   
 // Controls the power for 3way shooting
-if (can_3way=1 &amp;&amp; can_rapid=0)
+if (can_3way=1 &amp;&amp; can_rapid=0 &amp;&amp; can_shotgun =0)
 {
-    if (fkey &amp;&amp; can_shoot =1)
+    if (fkey &amp;&amp; can_shoot &gt;=1)
     {
     fireball=instance_create(x,y,obj_fireball);
     fireball.direction=direction;
@@ -438,14 +443,59 @@ if (can_3way=1 &amp;&amp; can_rapid=0)
     fireballdn=instance_create(x,y,obj_fireballdn);
     fireballdn.direction=direction-45;
     fireballdn.speed = 5;
-    can_shoot = 0;
-    alarm[0] = 60;
+    can_shoot += -1;
+    alarm[0]= 120;
     }
 }
 
+//Controls the power for shotgun 
+if can_3way =0 &amp;&amp; can_rapid =0 &amp;&amp; can_shotgun =1
+{
+    if (fkey &amp;&amp; can_shoot &gt;=1)
+    {
+    shotgun=instance_create(x,y,obj_spread);
+    shotgun.direction=direction;
+    shotgun.image_angle=direction;
+    shotgun.speed = 5;
+    can_shoot += -1;
+    alarm[0]= 120;
+    shotgun.alarm[0]=30;
+    }
+}   
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_shotgun">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Changes the variable "can_shotgun" to active the shotgun ability
+can_3way =0;
+can_rapid =0;  //So player can only have one power up active at a time
+can_shotgun =1; //So player can only have one power up active at a time
+alarm[1]=6000;
+with other
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -471,6 +521,7 @@ if (can_3way=1 &amp;&amp; can_rapid=0)
             <string>///Enables the rapid fire powerup
 can_rapid =1;
 can_3way =0;  //Switches the 3way off so player can have only one powerup at a time
+can_shotgun =0;
 alarm[1]=6000;
 with other
 {
@@ -501,6 +552,7 @@ with other
             <string>///Enables the 3 way shot powerup
 can_3way =1;
 can_rapid =0;  //So player can only have one power up active at a time
+can_shotgun =0; //So player can only have one power up active at a time
 alarm[1]=6000;
 with other
 {
