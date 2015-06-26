@@ -179,7 +179,7 @@ var lkey = keyboard_check(ord("A")) || gamepad_button_check(0,gp_padl);
 var jkey = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1);
 var dkey = keyboard_check(ord("S")) || gamepad_button_check(0,gp_padd);
 var jkey_held = keyboard_check(vk_space) || gamepad_button_check(0,gp_face1);
-var fkey = keyboard_check_pressed(ord("F"));
+var fkey = keyboard_check_pressed(ord("F")) || gamepad_button_check_pressed(0,gp_face4);
 
 
 if hspd = 0
@@ -190,7 +190,7 @@ if hspd = 0
 // Moving right
 if (rkey)
     {
-        hspd = (pspd*(1+xbutton+bbutton));
+        hspd = (pspd*(1+xbutton+bbutton))*0.8;
         sprite_index = spr_ninja_run;
         image_speed = .05*hspd;
         image_xscale = 1;
@@ -208,7 +208,7 @@ if (rkey)
 // Moving left
 if (lkey)
     {
-        hspd = -(pspd*(1+xbutton+bbutton));
+        hspd = -(pspd*(1+xbutton+bbutton))*0.8;
         sprite_index = spr_ninja_run;
         image_speed = .05*hspd;
         image_xscale = -1;
@@ -410,6 +410,7 @@ if can_rapid =1 &amp;&amp; can_3way=0
     fireball=instance_create(x,y,obj_fireball);
     fireball.direction=direction;
     fireball.speed = 5;
+    fireball.image_speed = .2;
     alarm[0]=15;
     alarm[1]=1200;
     }
@@ -425,6 +426,7 @@ if can_3way =0 &amp;&amp; can_rapid =0 &amp;&amp; can_shotgun =0
     fireball=instance_create(x,y,obj_fireball);
     fireball.direction=direction;
     fireball.speed = 5;
+    fireball.image_speed = .2;
     can_shoot += -1;
     alarm[0]= 120;
     }
