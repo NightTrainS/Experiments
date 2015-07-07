@@ -77,12 +77,14 @@
       </objects>
     </objects>
     <objects name="bObjects">
+      <object>objects\obj_enemy_shooter</object>
       <object>objects\obj_enemy_nojump</object>
       <object>objects\obj_bouncing_enemy</object>
       <object>objects\obj_spread</object>
       <object>objects\obj_bwalkingenemy</object>
       <object>objects\obj_controller</object>
       <object>objects\obj_fireball</object>
+      <object>objects\obj_fireball_enemy</object>
       <object>objects\obj_fireballup</object>
       <object>objects\obj_fireballdn</object>
       <object>objects\obj_3way</object>
