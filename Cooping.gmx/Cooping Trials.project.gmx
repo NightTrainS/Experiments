@@ -12,8 +12,10 @@
     <sound>sound\snd_enemy_pounce</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\spr_grn_turtle_walk_nojump</sprite>
     <sprite>sprites\spr_grn_turtle_walk</sprite>
     <sprite>sprites\spr_grn_turtle_walk_right</sprite>
+    <sprite>sprites\spr_grn_turtle_walk_right_nojump</sprite>
     <sprite>sprites\spr_grn_turtle_hide</sprite>
     <sprite>sprites\spr_grn_turle_unhide</sprite>
     <sprite>sprites\spr_grn_turtle_fly</sprite>
@@ -75,6 +77,7 @@
       </objects>
     </objects>
     <objects name="bObjects">
+      <object>objects\obj_enemy_nojump</object>
       <object>objects\obj_bouncing_enemy</object>
       <object>objects\obj_spread</object>
       <object>objects\obj_bwalkingenemy</object>
