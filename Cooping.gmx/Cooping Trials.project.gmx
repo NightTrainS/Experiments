@@ -13,9 +13,11 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_grn_turtle_walk_nojump</sprite>
+    <sprite>sprites\spr_blk_turtle_reflect</sprite>
     <sprite>sprites\spr_grn_turtle_walk</sprite>
     <sprite>sprites\spr_grn_turtle_walk_right</sprite>
     <sprite>sprites\spr_grn_turtle_walk_right_nojump</sprite>
+    <sprite>sprites\spr_blk_turtle_relfect_right</sprite>
     <sprite>sprites\spr_grn_turtle_hide</sprite>
     <sprite>sprites\spr_grn_turle_unhide</sprite>
     <sprite>sprites\spr_grn_turtle_fly</sprite>
@@ -85,11 +87,13 @@
       <object>objects\obj_controller</object>
       <object>objects\obj_fireball</object>
       <object>objects\obj_fireball_enemy</object>
+      <object>objects\obj_fireball_reflect</object>
       <object>objects\obj_fireballup</object>
       <object>objects\obj_fireballdn</object>
       <object>objects\obj_3way</object>
       <object>objects\obj_rapid</object>
       <object>objects\obj_shotgun</object>
+      <object>objects\obj_turtle_reflect</object>
     </objects>
   </objects>
   <rooms name="rooms">
